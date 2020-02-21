@@ -1,20 +1,22 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dowload video tiktok no logo</title>
+    <link rel="icon" href="./favicoin.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link href="https://getbootstrap.com/docs/4.4/examples/cover/cover.css" rel="stylesheet">
 </head>
 
-<body class="text-center" background="./bg.jpg" style="background-size: 100%">
+<body class="text-center" style="background-image: url('./bg.jpg');background-repeat: no-repeat;background-position: center center;background-size: cover;">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="masthead mb-auto">
             <div class="inner">
                 <h3 class="masthead-brand">Tik Tok</h3>
                 <nav class="nav nav-masthead justify-content-center">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link active" href="/">Home</a>
                     <!-- <a class="nav-link" href="#">Features</a>
                     <a class="nav-link" href="#">Contact</a> -->
                 </nav>
@@ -26,14 +28,14 @@
             <input type="text" class="form-control lead" id="url" placeholder="url">
             <p class="lead">*Note: there may be errors please return to the page</p>
             <p class="lead">
-                <button  id="magic" class="btn btn-lg btn-secondary" type="submit">Get Data</button>
+                <button id="magic" class="btn btn-lg btn-secondary" type="submit">Get Data</button>
             </p>
         </main>
         <div id="str"></div>
 
         <footer class="mastfoot mt-auto">
             <div class="inner">
-                <h5>Copyright © 2020 By, <a href="https://www.facebook.com/nguyenxuan.thuan.52">Levi</h5>.</p>
+                <h5>Copyright © 2020 By, <a href="https://www.facebook.com/nguyenxuan.thuan.52">Levi</a>.</h5>
             </div>
         </footer>
     </div>
@@ -52,7 +54,7 @@
                 dataType: "html",
                 data: "url=" + $("#url").val(),
                 success: function (data) {
-                    window.location=data.slice(data.indexOf(`href="`)+6, data.indexOf(`">点击下载720P无水印视频`))
+                    window.location = data.slice(data.indexOf(`href="`) + 6, data.indexOf(`">点击下载720P无水印视频`))
                 },
                 error: function (error) {
                     $("#str").html('ERRO');
@@ -61,4 +63,5 @@
         });
     });
 </script>
+
 </html>
